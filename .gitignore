@@ -1,0 +1,9 @@
+.venv
+__pycache__
+*.blend
+*.blend1
+*.pkl
+*.mp4
+!example_output/example_start.blend
+!example_output/example.blend
+!example_output/example.pkl
