@@ -58,7 +58,7 @@ Note that you need to re-start the server whenever you want to start a new recor
 You might want to start with a pre-defined Blender scene that the Drake objects should
 be added to using the `--blend_file` flag.
 
-The run your simulation as usual. Note that every render request from a Blender camera
+Then run your simulation as usual. Note that every render request from a Blender camera
 will trigger the recording of a new keyframe.
 
 The example simulation script shows how to set up such a Blender camera and can be run

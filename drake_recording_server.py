@@ -105,6 +105,11 @@ class Blender:
 
         self._keyframes = []
 
+        if self._keyframe_dump_path.exists():
+            raise ValueError(
+                f"Keyframe dump path {self._keyframe_dump_path} already exists."
+            )
+
     def reset_scene(self):
         """
         Resets the scene in Blender by loading the default startup file, and
@@ -312,6 +317,7 @@ class ServerApp(flask.Flask):
         Saves the current object poses as a keyframe and dump all poses so far to disk.
         """
         self._blender.save_keyframe(params=params)
+        print(f"Saved keyframe {len(self._blender._keyframes)}")
 
         # Clean up the temporary glTF file.
         params.scene.unlink(missing_ok=True)
