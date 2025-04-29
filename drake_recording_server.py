@@ -106,9 +106,17 @@ class Blender:
         self._keyframes = []
 
         if self._keyframe_dump_path.exists():
-            raise ValueError(
-                f"Keyframe dump path {self._keyframe_dump_path} already exists."
+            response = input(
+                f"Keyframe dump path {self._keyframe_dump_path} already exists. Do "
+                "you want to delete it? [y/N]: "
             )
+            if response.lower() == "y":
+                self._keyframe_dump_path.unlink()
+            else:
+                raise ValueError(
+                    f"Keyframe dump path {self._keyframe_dump_path} already exists "
+                    "and user chose not to delete it."
+                )
 
     def reset_scene(self):
         """
