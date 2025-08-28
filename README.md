@@ -4,8 +4,20 @@ Tools for replaying Drake simulations in Blender.
 Allows you to easily record Drake simulations and import them into Blender for
 visualization. The Blender scenes are animated using keyframes.
 
-Note that part of the code is based of [Drake Blender](https://github.com/RobotLocomotion/drake-blender).
-This work was inspired by [pybullet-blender-recorder](https://github.com/huy-ha/pybullet-blender-recorder).
+Note that part of the code is based of
+[Drake Blender](https://github.com/RobotLocomotion/drake-blender).
+This work was inspired by
+[pybullet-blender-recorder](https://github.com/huy-ha/pybullet-blender-recorder).
+
+Below is an example video from
+[Steerable Scene Generation](https://steerable-scene-generation.github.io/) that was
+enabled by Drake Blender Recorder. All individual clips from that video were created
+by first simulating in Drake, exporting into Blender using Drake Blender Recorder, and
+then rendering with Blender.
+
+<a href="https://youtu.be/oh9RajpEjKw">
+  <img src="media/steerable_scene_generation.png" alt="example_video" width="400">
+</a>
 
 # Setup
 
